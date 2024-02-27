@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.codingbox.web.dbconnection.DBConnection;
+import com.codingbox.web.dbconnection.DBConnection_bak;
 import com.codingbox.web.dto.MemberDTO;
 
 public class MemberDAO_bak {
@@ -20,7 +20,7 @@ public class MemberDAO_bak {
 		= "INSERT INTO TBL_MEMBER VALUES (?,?,?,?,?)";
 		
 		try{
-			conn = DBConnection.getConnection();
+			conn = DBConnection_bak.getConnection();
 			pstm = conn.prepareStatement(sql);
 			pstm.setString(1, mDto.getUserid());
 			pstm.setString(2, mDto.getUserpw());
@@ -51,7 +51,7 @@ public class MemberDAO_bak {
 		= "SELECT * FROM TBL_MEMBER WHERE USERID =? AND USERPW =?";
 		
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBConnection_bak.getConnection();
 			pstm = conn.prepareStatement(sql);
 			
 			pstm.setString(1, userid);
@@ -84,7 +84,7 @@ public class MemberDAO_bak {
 		= "SELECT COUNT(*) FROM TBL_MEMBER WHERE USERID=?";
 		
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBConnection_bak.getConnection();
 			pstm = conn.prepareStatement(sql);
 			
 			pstm.setString(1, userid);
