@@ -15,4 +15,10 @@
 	<select id="login" parameterType="hashmap" resultType="com.codingbox.web.dto.MemberDTO">
 		SELECT * FROM TBL_MEMBER WHERE USERID = #{userid} AND USERPW = #{userpw}
 	</select>
+	<select id="searchById" parameterType="string" resultType="com.codingbox.web.dto.MemberDTO">
+		SELECT * FROM TBL_MEMBER WHERE USERID = #{userid}
+	</select>
+	<select id="getList" resultType="com.codingbox.web.dto.MemberDTO">
+		SELECT * FROM TBL_MEMBER
+	</select>
 </mapper>
