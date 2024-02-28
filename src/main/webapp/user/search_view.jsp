@@ -36,15 +36,15 @@
 				</tr>
 			</c:when>
 		</c:choose>
-		<c:forEach var="list" items="${list}">
-            <tr>
-                <td>${list.userid}</td>
-                <td>${list.userpw}</td>
-                <td>${list.username}</td>
-                <td>${list.usergender}</td>
-                <td>${list.addrdetail}</td>
-            </tr>
-        </c:forEach>
+		<c:forEach var="user" items="${requestScope.list}">
+			<tr>
+				<td>${user.userid}</td>
+				<td>${user.userpw}</td>
+				<td>${user.username}</td>
+				<td>${user.usergender}</td>
+				<td>${user.addrdetail}</td>
+			</tr>
+		</c:forEach>
 	</table>
 </body>
 </html>

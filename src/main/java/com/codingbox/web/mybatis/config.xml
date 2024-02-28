@@ -17,5 +17,6 @@
 	
 	<mappers>
 		<mapper resource="com/codingbox/web/sql/member.xml"/>
+		<mapper resource="com/codingbox/web/sql/test.xml"/>
 	</mappers>
 </configuration>
